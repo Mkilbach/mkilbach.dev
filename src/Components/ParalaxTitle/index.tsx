@@ -13,13 +13,12 @@ const ParalaxTitle: React.FC<
     };
 
     useEffect(() => {
-        mouseMoveRef.current?.addEventListener("mousemove", handleMouseMove);
+        const refElement = mouseMoveRef.current;
+
+        refElement?.addEventListener("mousemove", handleMouseMove);
 
         return () => {
-            mouseMoveRef.current?.removeEventListener(
-                "mousemove",
-                handleMouseMove
-            );
+            refElement?.removeEventListener("mousemove", handleMouseMove);
         };
     }, [mouseMoveRef]);
 
