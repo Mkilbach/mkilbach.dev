@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { StyledParalaxTitle } from "./styles";
 
-const ParalaxTitle: React.FC<
-    React.PropsWithChildren<{
-        mouseMoveRef: React.RefObject<HTMLElement>;
-    }>
-> = ({ mouseMoveRef, children }) => {
+import titleBg from "assets/titleBg.jpeg";
+
+const ParalaxTitle: React.FC<{
+    mouseMoveRef: React.RefObject<HTMLElement>;
+    text: string;
+}> = ({ mouseMoveRef, text }) => {
     const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = ({ pageX, pageY }: MouseEvent) => {
@@ -23,8 +24,12 @@ const ParalaxTitle: React.FC<
     }, [mouseMoveRef]);
 
     return (
-        <StyledParalaxTitle variant="h1" bgPosition={bgPosition}>
-            {children}
+        <StyledParalaxTitle
+            variant="h1"
+            bgPosition={bgPosition}
+            bgImage={titleBg}
+        >
+            {text}
         </StyledParalaxTitle>
     );
 };

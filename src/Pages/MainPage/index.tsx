@@ -9,7 +9,7 @@ const MainPage = () => {
     return (
         <MainLayout ref={ref}>
             <MainContainer>
-                <ParalaxTitle mouseMoveRef={ref}>MKILBACH.DEV</ParalaxTitle>
+                <ParalaxTitle mouseMoveRef={ref} text="MKILBACH.DEV" />
             </MainContainer>
         </MainLayout>
     );
