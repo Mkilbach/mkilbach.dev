@@ -22,6 +22,7 @@ export const StyledParalaxTitle = styled(Typography, {
         WebkitTextFillColor: "transparent",
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
+        backgroundSize: '150%',
         transition: "background-position .2s ease-out",
 
         "@-moz-document url-prefix()": {
@@ -42,6 +43,7 @@ export const StyledParalaxTitle = styled(Typography, {
             backgroundImage: "inherit",
             backgroundRepeat: "inherit",
             backgroundPosition: "inherit",
+            backgroundSize: "inherit",
         },
 
         "&:after": {

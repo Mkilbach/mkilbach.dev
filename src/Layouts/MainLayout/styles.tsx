@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 import { theme } from "../../utils/theme";
 
-export const Container = styled("div")({
+export const MainContainer = styled("div")({
     backgroundColor: theme.palette.backgroundPrimary.main,
     padding: "5rem",
     minHeight: "100vh",
@@ -9,4 +9,9 @@ export const Container = styled("div")({
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
+});
+
+
+export const ComponentsContainer = styled("div")({
+    
 });
