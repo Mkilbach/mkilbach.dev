@@ -1,3 +1,6 @@
+import { GitHub } from "@mui/icons-material";
+import IconsList from "Components/IconsList";
+import TitleContainer from "Layouts/TitleContainer";
 import { useRef } from "react";
 import ParalaxTitle from "../../Components/ParalaxTitle";
 import MainLayout from "../../Layouts/MainLayout";
@@ -9,7 +12,13 @@ const MainPage = () => {
     return (
         <MainLayout ref={ref}>
             <MainContainer>
-                <ParalaxTitle mouseMoveRef={ref} text="MKILBACH.DEV" />
+                <TitleContainer
+                    title={
+                        <ParalaxTitle mouseMoveRef={ref} text="MKILBACH.DEV" />
+                    }
+                >
+                    <IconsList icons={[{ icon: GitHub, caption: "GitHub", href: 'https://github.com/Mkilbach' }]} />
+                </TitleContainer>
             </MainContainer>
         </MainLayout>
     );

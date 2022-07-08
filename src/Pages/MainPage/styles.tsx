@@ -40,5 +40,8 @@ export const Title = styled(Typography)({
     },
 });
 
-export const MainContainer = styled("div")(`
-`);
+export const MainContainer = styled("div")({
+    width: "50rem",
+    maxWidth: "100%",
+    textAlign: "center",
+});

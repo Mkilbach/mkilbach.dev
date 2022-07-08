@@ -26,8 +26,12 @@ const ParalaxTitle: React.FC<{
     return (
         <StyledParalaxTitle
             variant="h1"
-            bgPosition={bgPosition}
             bgImage={titleBg}
+            style={{
+                backgroundPosition: `calc(50% - ${
+                    bgPosition.x * 0.04
+                }px) calc(50% - ${bgPosition.y * 0.04}px)`,
+            }}
         >
             {text}
         </StyledParalaxTitle>

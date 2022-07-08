@@ -5,11 +5,11 @@ import { theme } from "../../utils/theme";
 export const StyledParalaxTitle = styled(Typography, {
     shouldForwardProp: props => props !== "bgPosition" && props !== "bgImage",
 })<{
-    bgPosition: { x: number; y: number };
+    // bgPosition: { x: number; y: number };
     bgImage?: string;
 }>(
     ({
-        bgPosition,
+        // bgPosition,
         bgImage = "https://as2.ftcdn.net/v2/jpg/02/93/05/45/1000_F_293054544_FRHpSMD4K7QsAwr9QQcisVe3acQvhgNm.jpg",
     }) => ({
         color: "#fff",
@@ -17,16 +17,14 @@ export const StyledParalaxTitle = styled(Typography, {
         fontWeight: "bold",
         position: "relative",
         display: "inline-block",
+        fontFamily: "'Kanit', sans-serif",
         textTransform: "uppercase",
         padding: "1rem",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
-        backgroundPosition: `calc(50% - ${bgPosition.x * 0.02}px) calc(50% - ${
-            bgPosition.y * 0.04
-        }px)`,
-        transition: "background-position .1s",
+        transition: "background-position .1 ease-out",
 
         "&:before, &:after": {
             position: "absolute",
