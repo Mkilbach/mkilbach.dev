@@ -5,11 +5,9 @@ import { ComponentsContainer, MainContainer } from "./styles";
 const MainLayout: React.FC<any> = React.forwardRef(
     ({ children, ...props }, ref) => {
         return (
-            <MainContainer>
+            <MainContainer {...props} ref={ref}>
                 <AppBar />
-                <ComponentsContainer {...props} ref={ref}>
-                    {children}
-                </ComponentsContainer>
+                <ComponentsContainer>{children}</ComponentsContainer>
             </MainContainer>
         );
     }

@@ -13,7 +13,10 @@ const EmailIcon = () => {
 
     return (
         <IconButton disabled={blocked} onClick={() => setIsOpen(x => !x)}>
-            <SmallIcon icon={isOpen ? Drafts : Mail} />
+            <SmallIcon
+                component={isOpen ? Drafts : Mail}
+                color={blocked ? "disabled" : "secondary"}
+            />
         </IconButton>
     );
 };

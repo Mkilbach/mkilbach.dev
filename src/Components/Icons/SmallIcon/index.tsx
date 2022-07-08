@@ -1,8 +1,11 @@
 import React from "react";
-import { StyledSmallIcon } from "./styles";
+import { StyledSmallIcon, StyledSmallIconType } from "./styles";
 
-const SmallIcon: React.FC<{ icon: React.FC }> = ({ icon }) => {
-    return <StyledSmallIcon component={icon} />;
+const SmallIcon: React.ComponentType<StyledSmallIconType> = ({
+    component,
+    ...props
+}) => {
+    return <StyledSmallIcon component={component} {...props} />;
 };
 
 export default SmallIcon;

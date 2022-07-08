@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material";
-import { orange } from "@mui/material/colors";
+import { grey, orange } from "@mui/material/colors";
 
 declare module "@mui/material/styles" {
     interface Theme {
@@ -26,16 +26,17 @@ export const theme = createTheme({
             light: "#edfaff",
             main: "#d9effa",
             dark: "#a4d9eb",
-            // contrastText: will be calculated to contrast with palette.primary.main
         },
         secondary: {
             light: "#a3d8ea",
             main: "#6cc7e2",
             dark: "#00b4d5",
-            // contrastText: will be calculated to contrast with palette.secondary.main
         },
         backgroundPrimary: {
             main: "#012E40",
+        },
+        action: {
+            disabled: grey[500],
         },
     },
     status: {
