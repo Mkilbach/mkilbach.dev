@@ -3,9 +3,8 @@ import { styled } from "@mui/system";
 import { theme } from "../../utils/theme";
 
 export const StyledParalaxTitle = styled(Typography, {
-    shouldForwardProp: props => props !== "bgPosition" && props !== "bgImage",
+    shouldForwardProp: props => props !== "bgImage",
 })<{
-    // bgPosition: { x: number; y: number };
     bgImage?: string;
 }>(
     ({
@@ -24,7 +23,11 @@ export const StyledParalaxTitle = styled(Typography, {
         WebkitTextFillColor: "transparent",
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
-        transition: "background-position .1 ease-out",
+        transition: "background-position .2s ease-out",
+
+        "@-moz-document url-prefix()": {
+            transition: "none",
+        },
 
         "&:before, &:after": {
             position: "absolute",
