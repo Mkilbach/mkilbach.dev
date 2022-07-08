@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { StyledParalaxTitle } from "./styles";
+import { StyledParalaxTitle, StyledParalaxTitleContainer } from "./styles";
 
 import titleBg from "assets/titleBg.jpeg";
 
@@ -24,17 +24,19 @@ const ParalaxTitle: React.FC<{
     }, [mouseMoveRef]);
 
     return (
-        <StyledParalaxTitle
-            variant="h1"
-            bgImage={titleBg}
-            style={{
-                backgroundPosition: `calc(50% - ${
-                    bgPosition.x * 0.04
-                }px) calc(50% - ${bgPosition.y * 0.04}px)`,
-            }}
-        >
-            {text}
-        </StyledParalaxTitle>
+        <StyledParalaxTitleContainer>
+            <StyledParalaxTitle
+                variant="h1"
+                bgImage={titleBg}
+                style={{
+                    backgroundPosition: `calc(50% - ${
+                        bgPosition.x * 0.04
+                    }px) calc(50% - ${bgPosition.y * 0.04}px)`,
+                }}
+            >
+                {text}
+            </StyledParalaxTitle>
+        </StyledParalaxTitleContainer>
     );
 };
 

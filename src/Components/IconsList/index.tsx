@@ -15,6 +15,7 @@ const IconsList: React.FC<{ icons: IconType[] }> = ({ icons }) => {
         <StyledIconsContainer>
             {icons.map(({ icon, caption, href }) => (
                 <StyledIconContainer
+                    key={href}
                     href={href}
                     target="_blank"
                     rel="noreferrer"

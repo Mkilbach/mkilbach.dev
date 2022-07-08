@@ -8,7 +8,6 @@ export const StyledParalaxTitle = styled(Typography, {
     bgImage?: string;
 }>(
     ({
-        // bgPosition,
         bgImage = "https://as2.ftcdn.net/v2/jpg/02/93/05/45/1000_F_293054544_FRHpSMD4K7QsAwr9QQcisVe3acQvhgNm.jpg",
     }) => ({
         color: "#fff",
@@ -56,3 +55,8 @@ export const StyledParalaxTitle = styled(Typography, {
         },
     })
 );
+
+export const StyledParalaxTitleContainer = styled("div")({
+    zIndex: 0,
+    position: "relative",
+});

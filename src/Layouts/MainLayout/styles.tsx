@@ -7,6 +7,6 @@ export const Container = styled("div")({
     minHeight: "100vh",
     display: "flex",
     justifyContent: "center",
-    zIndex: 0,
-    position: 'relative'
+    alignItems: "center",
+    position: "relative",
 });

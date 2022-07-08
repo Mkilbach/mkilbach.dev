@@ -2,8 +2,8 @@ import { styled, keyframes } from "@mui/system";
 
 const slideUp = keyframes`
   to {
-    top: 0;
-    transform: translate(0, 0);
+    top: 0%;
+    transform: translate(-50%, 0%);
   }
 `;
 
@@ -27,17 +27,26 @@ const setWidth = keyframes`
   }
 `;
 
-export const StyledTitleContainer = styled("div")({
+export const StyledWrapper = styled("div")({
     position: "relative",
+});
+
+export const StyledTitleWrapper = styled("div")({
+    height: `125px`,
+});
+
+export const StyledTitleContainer = styled("div")({
+    position: "absolute",
+    left: "50%",
     top: "50%",
+    transform: "translate(-50%, -50%)",
     animation: `${slideUp} 1.5s ease-in-out 1s forwards`,
-    transform: "translate(0, -50%)",
 });
 
 export const StyledChildrenContainer = styled("div")({
     opacity: "0",
     color: "white",
-    animation: `${show} .5s ease-in-out 2.2s forwards`,
+    animation: `${show} .5s ease-in-out 2.5s forwards`,
 });
 
 export const StyledDivider = styled("div")({
