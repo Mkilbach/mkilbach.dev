@@ -1,4 +1,5 @@
 import { styled, keyframes } from "@mui/system";
+import { theme } from "utils/theme";
 
 const slideUp = keyframes`
   to {
@@ -45,14 +46,13 @@ export const StyledTitleContainer = styled("div")({
 
 export const StyledChildrenContainer = styled("div")({
     opacity: "0",
-    color: "white",
     animation: `${show} .5s ease-in-out 2.5s forwards`,
 });
 
 export const StyledDivider = styled("div")({
     height: "1px",
     width: "0",
-    backgroundColor: "white",
+    backgroundColor: theme.palette.primary.main,
     margin: "2rem auto",
     animation: `${setWidth} .5s ease-in-out 2.2s forwards`,
 });

@@ -1,6 +1,9 @@
 import {
+    StyledIconCaption,
     StyledIconContainer,
     StyledIconsContainer,
+    StyledIconWrapper,
+    StyledMaskSvgIcon,
     StyledSvgIcon,
 } from "./styles";
 
@@ -20,8 +23,20 @@ const IconsList: React.FC<{ icons: IconType[] }> = ({ icons }) => {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <StyledSvgIcon component={icon} />
-                    <span className="caption">{caption}</span>
+                    <StyledIconWrapper className="icon-wrapper">
+                        <StyledSvgIcon component={icon} className="icon" />
+                        <StyledMaskSvgIcon
+                            component={icon}
+                            className="mask-icon"
+                        />
+                    </StyledIconWrapper>
+                    <StyledIconCaption
+                        component={"span"}
+                        variant="subtitle1"
+                        className="caption"
+                    >
+                        {caption}
+                    </StyledIconCaption>
                 </StyledIconContainer>
             ))}
         </StyledIconsContainer>

@@ -17,6 +17,36 @@ const iconsList = [
         caption: "LinkedIn",
         href: "https://www.linkedin.com/in/mateusz-kilbach/",
     },
+    {
+        icon: GitHub,
+        caption: "GitHub",
+        href: "https://github.com/Mkilbach",
+    },
+    {
+        icon: LinkedIn,
+        caption: "LinkedIn",
+        href: "https://www.linkedin.com/in/mateusz-kilbach/",
+    },
+    {
+        icon: GitHub,
+        caption: "GitHub",
+        href: "https://github.com/Mkilbach",
+    },
+    {
+        icon: LinkedIn,
+        caption: "LinkedIn",
+        href: "https://www.linkedin.com/in/mateusz-kilbach/",
+    },
+    {
+        icon: GitHub,
+        caption: "GitHub",
+        href: "https://github.com/Mkilbach",
+    },
+    {
+        icon: LinkedIn,
+        caption: "LinkedIn",
+        href: "https://www.linkedin.com/in/mateusz-kilbach/",
+    },
 ];
 
 const MainPage = () => {

@@ -1,28 +1,70 @@
-import { SvgIcon } from "@mui/material";
+import { SvgIcon, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import { theme } from "utils/theme";
 
-export const StyledIconsContainer = styled("div")({});
+export const StyledIconsContainer = styled("div")({
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+});
 
 export const StyledIconContainer = styled("a")({
     cursor: "pointer",
-    display: "inline-flex",
+    display: "flex",
     flexDirection: "column",
     alignItems: "center",
-
-    "&:hover": {
-        "& .caption": {
-            opacity: 1,
-        },
-    },
+    justifyContent: "flex-end",
+    width: "5rem",
+    height: "8rem",
+    margin: "1rem 3rem",
+    color: theme.palette.primary.main,
 
     "& .caption": {
         transition: "opacity .5s",
         opacity: 0,
     },
+
+    "&:hover": {
+        "& .caption": {
+            opacity: 1,
+        },
+        "& .icon-wrapper": {
+            width: "6rem",
+            height: "6rem",
+        },
+        "& .mask-icon": {
+            clipPath: "circle(100%)",
+        },
+    },
 });
 
+const commonIconStyles = {
+    width: "100%",
+    height: "100%",
+};
+
 export const StyledSvgIcon = styled(SvgIcon)<{ component: React.FC }>({
+    ...commonIconStyles,
+});
+
+export const StyledMaskSvgIcon = styled(SvgIcon)<{ component: React.FC }>({
+    ...commonIconStyles,
+    position: "absolute",
+    left: "50%",
+    top: "50%",
+    transform: "translate(-50%, -50%)",
+    clipPath: "circle(10% at 0 100%)",
+    transition: "clip-path .5s ease-in-out",
+    color: theme.palette.secondary.dark,
+});
+
+export const StyledIconWrapper = styled("div")({
+    position: "relative",
     width: "5rem",
     height: "5rem",
-    marginBottom: ".5rem",
+    transition: "width .3s, height .3s",
+});
+
+export const StyledIconCaption = styled(Typography)<{ component: string }>({
+    fontFamily: "'Kanit', sans-serif",
 });

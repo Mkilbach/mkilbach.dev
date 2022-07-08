@@ -4,12 +4,12 @@ import { orange } from "@mui/material/colors";
 declare module "@mui/material/styles" {
     interface Theme {
         status: {
-            danger: React.CSSProperties['color'];
+            danger: React.CSSProperties["color"];
         };
     }
     interface ThemeOptions {
         status?: {
-            danger?: React.CSSProperties['color'];
+            danger?: React.CSSProperties["color"];
         };
     }
     interface Palette {
@@ -23,15 +23,15 @@ declare module "@mui/material/styles" {
 export const theme = createTheme({
     palette: {
         primary: {
-            // light: will be calculated from palette.primary.main,
-            main: "#012E40",
-            // dark: will be calculated from palette.primary.main,
+            light: "#edfaff",
+            main: "#d9effa",
+            dark: "#a4d9eb",
             // contrastText: will be calculated to contrast with palette.primary.main
         },
         secondary: {
-            // light: will be calculated from palette.secondary.main,
-            main: "#026773",
-            // dark: will be calculated from palette.secondary.main,
+            light: "#a3d8ea",
+            main: "#6cc7e2",
+            dark: "#00b4d5",
             // contrastText: will be calculated to contrast with palette.secondary.main
         },
         backgroundPrimary: {
