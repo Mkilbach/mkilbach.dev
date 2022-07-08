@@ -1,15 +1,8 @@
-import logo from "./logo.svg";
-import "./App.css";
+import MainPage from "./Pages/MainPage";
+import "styles.css";
 
 function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>FTP test...</p>
-            </header>
-        </div>
-    );
+    return <MainPage />;
 }
 
 export default App;
