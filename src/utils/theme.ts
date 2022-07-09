@@ -43,3 +43,10 @@ export const theme = createTheme({
         danger: orange[500],
     },
 });
+
+theme.typography.subtitle1 = {
+    fontSize: ".7rem",
+    [theme.breakpoints.up("md")]: {
+        fontSize: "1rem",
+    },
+};

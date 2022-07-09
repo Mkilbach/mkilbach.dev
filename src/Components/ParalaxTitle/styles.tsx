@@ -11,7 +11,7 @@ export const StyledParalaxTitle = styled(Typography, {
         bgImage = "https://as2.ftcdn.net/v2/jpg/02/93/05/45/1000_F_293054544_FRHpSMD4K7QsAwr9QQcisVe3acQvhgNm.jpg",
     }) => ({
         color: "#fff",
-        fontSize: "5rem",
+        fontSize: "1.8rem",
         fontWeight: "bold",
         position: "relative",
         display: "inline-block",
@@ -22,8 +22,15 @@ export const StyledParalaxTitle = styled(Typography, {
         WebkitTextFillColor: "transparent",
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: '150%',
+        backgroundSize: "150%",
         transition: "background-position .2s ease-out",
+
+        [theme.breakpoints.up("sm")]: {
+            fontSize: "3rem",
+        },
+        [theme.breakpoints.up("md")]: {
+            fontSize: "5rem",
+        },
 
         "@-moz-document url-prefix()": {
             transition: "none",

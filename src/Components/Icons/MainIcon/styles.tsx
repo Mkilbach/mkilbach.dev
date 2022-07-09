@@ -8,24 +8,42 @@ export const StyledIconContainer = styled("a")({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "flex-end",
-    width: "5rem",
-    height: "8rem",
-    margin: "1rem 3rem",
+    width: "2rem",
+    height: "4rem",
+    margin: "1rem 1.5rem",
     color: theme.palette.primary.main,
+
+    [theme.breakpoints.up("sm")]: {
+        width: "3rem",
+        height: "5rem",
+        margin: "1rem 2rem",
+    },
+    [theme.breakpoints.up("md")]: {
+        width: "5rem",
+        height: "8rem",
+        margin: "1rem 3rem",
+    },
 
     "& .caption": {
         transition: "opacity .5s",
-        opacity: 0,
+        opacity: 1,
+
+        [theme.breakpoints.up("md")]: {
+            opacity: 0,
+        },
     },
 
     "&:hover": {
-        "& .caption": {
-            opacity: 1,
+        [theme.breakpoints.up("md")]: {
+            "& .caption": {
+                opacity: 1,
+            },
+            "& .icon-wrapper": {
+                width: "6rem",
+                height: "6rem",
+            },
         },
-        "& .icon-wrapper": {
-            width: "6rem",
-            height: "6rem",
-        },
+
         "& .mask-icon": {
             clipPath: "circle(100%)",
         },
@@ -51,9 +69,18 @@ export const StyledMaskSvgIcon = styled(SvgIcon)<{ component: React.FC }>({
 
 export const StyledIconWrapper = styled("div")({
     position: "relative",
-    width: "5rem",
-    height: "5rem",
+    width: "2.5rem",
+    height: "2.5rem",
     transition: "width .3s, height .3s",
+
+    [theme.breakpoints.up("sm")]: {
+        width: "4rem",
+        height: "4rem",
+    },
+    [theme.breakpoints.up("md")]: {
+        width: "5rem",
+        height: "5rem",
+    },
 });
 
 export const StyledIconCaption = styled(Typography)<{ component: string }>({

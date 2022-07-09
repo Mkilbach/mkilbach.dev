@@ -33,7 +33,14 @@ export const StyledWrapper = styled("div")({
 });
 
 export const StyledTitleWrapper = styled("div")({
-    height: `125px`,
+    height: `65px`,
+
+    [theme.breakpoints.up("sm")]: {
+        height: `80px`,
+    },
+    [theme.breakpoints.up("md")]: {
+        height: `125px`,
+    },
 });
 
 export const StyledTitleContainer = styled("div")({
@@ -52,6 +59,7 @@ export const StyledChildrenContainer = styled("div")({
 export const StyledDivider = styled("div")({
     height: "1px",
     width: "0",
+    maxWidth: "90%",
     backgroundColor: theme.palette.primary.main,
     margin: "2rem auto",
     animation: `${setWidth} .5s ease-in-out 2.2s forwards`,
