@@ -1,12 +1,14 @@
+import AppBar from "Components/AppBar";
 import React from "react";
-import { Container } from "./styles";
+import { ComponentsContainer, MainContainer } from "./styles";
 
 const MainLayout: React.FC<any> = React.forwardRef(
     ({ children, ...props }, ref) => {
         return (
-            <Container {...props} ref={ref}>
-                {children}
-            </Container>
+            <MainContainer {...props} ref={ref}>
+                <AppBar />
+                <ComponentsContainer>{children}</ComponentsContainer>
+            </MainContainer>
         );
     }
 );

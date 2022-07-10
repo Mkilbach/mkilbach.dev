@@ -1,8 +1,5 @@
-import {
-    StyledIconContainer,
-    StyledIconsContainer,
-    StyledSvgIcon,
-} from "./styles";
+import MainIcon from "Components/Icons/MainIcon";
+import { StyledIconsContainer } from "./styles";
 
 type IconType = {
     icon: React.FC;
@@ -14,14 +11,12 @@ const IconsList: React.FC<{ icons: IconType[] }> = ({ icons }) => {
     return (
         <StyledIconsContainer>
             {icons.map(({ icon, caption, href }) => (
-                <StyledIconContainer
+                <MainIcon
+                    key={href}
+                    icon={icon}
+                    caption={caption}
                     href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <StyledSvgIcon component={icon} />
-                    <span className="caption">{caption}</span>
-                </StyledIconContainer>
+                />
             ))}
         </StyledIconsContainer>
     );
