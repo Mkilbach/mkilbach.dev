@@ -1,8 +1,8 @@
+import { useContext, useEffect, useRef, useState } from "react";
 import { GitHub, LinkedIn } from "@mui/icons-material";
 import IconsList from "Components/IconsList";
 import { showMailContext } from "Context/showMailContext";
 import TitleContainer from "Layouts/TitleContainer";
-import { useContext, useEffect, useRef, useState } from "react";
 import { swapText } from "utils/swapText";
 import ParalaxTitle from "../../Components/ParalaxTitle";
 import MainLayout from "../../Layouts/MainLayout";
