@@ -20,7 +20,7 @@ export const StyledParalaxTitle = styled(Typography, {
     backgroundImage: `url(${bgImage})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "150%",
-    transition: "background-position .2s ease-out",
+    transition: "background-position .3s ease-out",
 
     [theme.breakpoints.up("sm")]: {
         fontSize: "3rem",
